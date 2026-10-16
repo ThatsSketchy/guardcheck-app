@@ -1,62 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuardCheck — Security & Investigative Intelligence</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GuardCheck App</title>
     <style>
-        :root {
-            --bg-primary: #0a0d12;
-            --text-primary: #e8eaed;
-            --accent: #0ea5e9;
-            --accent-glow: rgba(14, 165, 233, 0.3);
-        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(180deg, #0f1115 0%, #14181d 100%);
-            color: var(--text-primary);
-            min-height: 100vh;
-        }
-        .container { max-width: 980px; margin: 0 auto; padding: 28px 20px; }
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 16px 0;
-            margin-bottom: 24px;
-        }
-        .brand { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
-        .brand span { color: var(--accent); }
-        nav {
-            display: flex; gap: 8px;
-        }
-        .nav-btn {
-            padding: 8px 14px;
-            background: rgba(20, 24, 30, 0.5);
-            border: 1px solid rgba(14,165,233,0.2);
-            border-radius: 8px;
-            color: var(--text-secondary);
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .nav-btn:hover { background: rgba(14,165,233,0.15); color: #fff; }
-        .nav-btn.active { background: var(--accent); border-color: var(--accent);
-            box-shadow: 0 4px 16px var(--accent-glow); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 100vh; color: #fff; display: flex; align-items: center; justify-content: center; }
+        .container { max-width: 720px; width: 90%; padding: 60px 40px; background: rgba(255,255,255,0.05); border-radius: 20px; backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        h1 { font-size: 36px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(90deg, #e94560, #0f3460); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        p { font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 32px; }
+        .button { display: inline-block; padding: 16px 40px; background: linear-gradient(90deg, #e94560, #ff6b6b); color: #fff; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 16px; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(233,69,96,0.4); }
+        .button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(233,69,96,0.5); }
+        .status { display: flex; align-items: center; gap: 10px; margin-top: 24px; }
+        .status-dot { width: 12px; height: 12px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 10px #00ff88; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="brand">Guard<span>Check</span></div>
-            <nav>
-                <button class="nav-btn active">Overview</button>
-                <button class="nav-btn">Statistics</button>
-                <button class="nav-btn">About</button>
-            </nav>
-        </header>
+        <h1>GuardCheck App</h1>
+        <p>Safety monitoring for your team</p>
+        <a href="#" class="button">Get Started</a>
+        <div class="status"><div class="status-dot"></div><span>System Online</span></div>
     </div>
 </body>
 </html>
